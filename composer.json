@@ -2,7 +2,7 @@
 	"name": "aimeos/ai-gettext",
 	"description": "Aimeos Gettext extension",
 	"keywords": ["aimeos", "extension", "gettext", "performance"],
-	"homepage": "https://aimeos.org",
+	"homepage": "https://aimeos.org/",
 	"type": "aimeos-extension",
 	"license": "LGPL-3.0",
 	"support": {
