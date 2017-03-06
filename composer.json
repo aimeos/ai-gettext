@@ -11,21 +11,12 @@
 		"forum": "https://aimeos.org/help",
 		"wiki": "https://aimeos.org/docs"
 	},
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/aimeos/php-coveralls.git"
-		}
-	],
 	"prefer-stable": true,
 	"minimum-stability": "dev",
 	"require": {
 		"php": ">=5.3.3",
 		"composer/installers": "^1.0",
 		"aimeos/aimeos-core": "dev-master"
-	},
-	"require-dev": {
-		"satooshi/php-coveralls": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
