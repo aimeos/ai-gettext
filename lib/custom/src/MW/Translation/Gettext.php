@@ -100,7 +100,7 @@ class Gettext
 	 */
 	public function getAll( $domain )
 	{
-		$messages = array();
+		$messages = [];
 
 		foreach( $this->getTranslations( $domain ) as $object ) {
 			$messages = $messages + $object->all();
@@ -135,7 +135,7 @@ class Gettext
 			}
 		}
 
-		return ( isset( $this->files[$domain] ) ? $this->files[$domain] : array() );
+		return ( isset( $this->files[$domain] ) ? $this->files[$domain] : [] );
 	}
 
 }
