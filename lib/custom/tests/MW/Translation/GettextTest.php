@@ -9,7 +9,7 @@
 namespace Aimeos\MW\Translation;
 
 
-class GettextTest extends \PHPUnit_Framework_TestCase
+class GettextTest extends \PHPUnit\Framework\TestCase
 {
 	private $object;
 
