@@ -42,7 +42,7 @@ class GettextTest extends \PHPUnit\Framework\TestCase
 	{
 		$this->assertEquals( '', $this->object->dt( 'testDomain', null ) );
 
-		$this->expectException( '\Aimeos\MW\Translation\Exception' );
+		$this->setExpectedException( '\Aimeos\MW\Translation\Exception' );
 		$this->object->dt( 'invalidTestDomain', 'test' );
 	}
 
@@ -74,7 +74,7 @@ class GettextTest extends \PHPUnit\Framework\TestCase
 		$this->assertEquals( '', $this->object->dn( 'testDomain', '', null, 1 ) );
 		$this->assertEquals( '', $this->object->dn( 'testDomain', '', '', null ) );
 
-		$this->expectException( '\Aimeos\MW\Translation\Exception' );
+		$this->setExpectedException( '\Aimeos\MW\Translation\Exception' );
 		$this->object->dn( 'invalidTestDomain', 'test', 'tests', 2 );
 	}
 
