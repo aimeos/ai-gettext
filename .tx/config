@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+minimum_perc = 1
+
+[aimeos-extensions.ai-gettext-lib-custom]
+file_filter = lib/custom/i18n/<lang>.po
+source_file = lib/custom/i18n/ai-gettext-custom.pot
+source_lang = en
+type = PO
