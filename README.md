@@ -27,7 +27,7 @@ php -r "readfile('https://getcomposer.org/installer');" | php -- --filename=comp
 Add the Gettext extension name to the "require" section of your ```composer.json``` (or your ```composer.aimeos.json```, depending on what is available) file:
 ```
 "require": [
-    "aimeos/ai-gettext": "dev-master",
+    "aimeos/ai-gettext": "~2017.10",
     ...
 ],
 ```
