@@ -2,20 +2,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-
+# 
+# Translators:
+# stevechen <steve.stevechen@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: aimeos\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-27 08:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Aimeos <aimeos@aimeos.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Last-Translator: stevechen <steve.stevechen@gmail.com>, 2018\n"
+"Language-Team: Chinese (https://www.transifex.com/aimeos/teams/39015/zh/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/MW/Translation/Gettext.php:126
 #, php-format
@@ -25,4 +27,4 @@ msgstr ""
 #: src/MW/Translation/File/Mo.php:42
 #, php-format
 msgid "Unable to read from file \"%1$s\""
-msgstr ""
+msgstr "無法從檔案 \"%1$s\"讀取"
