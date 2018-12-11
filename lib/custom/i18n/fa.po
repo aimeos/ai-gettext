@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Aimeos, 2017
+# hasan hojjati <hojjati64@gmail.com>, 2018
 # 
 msgid ""
 msgstr ""
@@ -12,20 +12,20 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-27 08:31+0200\n"
 "PO-Revision-Date: 2017-10-02 17:14+0000\n"
-"Last-Translator: Aimeos, 2017\n"
-"Language-Team: German (https://www.transifex.com/aimeos/teams/39015/de/)\n"
+"Last-Translator: hasan hojjati <hojjati64@gmail.com>, 2018\n"
+"Language-Team: Persian (https://www.transifex.com/aimeos/teams/39015/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fa\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: src/MW/Translation/Gettext.php:126
 #, php-format
 msgid "No translation directory for domain \"%1$s\" available"
-msgstr "Für die Domäne \"%1$s\" existiert kein Übersetzungsverzeichnis"
+msgstr "پوشه ترجمه ای برای دامین \"%1$s\" در دسترس نیست"
 
 #: src/MW/Translation/File/Mo.php:42
 #, php-format
 msgid "Unable to read from file \"%1$s\""
-msgstr "Die Datei \"%1$s\" konnte nicht gelesen werden"
+msgstr "عدم توانایی خواندن اطلاعات از فایل \"%1$s\""
