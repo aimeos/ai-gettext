@@ -196,7 +196,7 @@ class Mo
 	 * @param integer $bytes Number of bytes to read
 	 * @return string|boolean Read bytes or false on failure
 	 */
-	protected function read($bytes)
+	protected function read( $bytes )
 	{
 		$data = substr( $this->str, $this->pos, $bytes );
 		$this->seekto( $this->pos + $bytes );
@@ -211,7 +211,7 @@ class Mo
 	 * @param integer $pos Number of bytes to move
 	 * @return integer New file position in bytes
 	 */
-	protected function seekto($pos)
+	protected function seekto( $pos )
 	{
 		$this->pos = ( $this->strlen < $pos ? $this->strlen : $pos );
 		return $this->pos;
