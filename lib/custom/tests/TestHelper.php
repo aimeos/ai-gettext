@@ -80,7 +80,7 @@ class TestHelper
 
 		$ctx->setLocale( $localeItem );
 
-		$ctx->setEditor( 'ai-gettext:lib/custom' );
+		$ctx->setEditor( 'ai-gettext:unittest' );
 
 		return $ctx;
 	}
