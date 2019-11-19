@@ -36,7 +36,7 @@ class Mo
 	 *
 	 * @param string $filepath Absolute path to the Gettext .mo file
 	 */
-	public function __construct( $filepath )
+	public function __construct( string $filepath )
 	{
 		if( ( $str = file_get_contents( $filepath ) ) === false ) {
 			throw new \Aimeos\MW\Translation\Exception( sprintf( 'Unable to read from file "%1$s"', $filepath ) );
@@ -53,7 +53,7 @@ class Mo
 	 *
 	 * @return array List of translations with original as key and translations as values
 	 */
-	public function all()
+	public function all() : array
 	{
 		return $this->messages;
 	}
@@ -63,27 +63,25 @@ class Mo
 	 * Returns the translations for the given original string
 	 *
 	 * @param string $original Untranslated string
-	 * @return array|boolean List of translations or false if none is available
+	 * @return array|string|null List of translations or false if none is available
 	 */
-	public function get( $original )
+	public function get( string $original )
 	{
-		$original = (string) $original;
-
 		if( isset( $this->messages[$original] ) ) {
 			return $this->messages[$original];
 		}
 
-		return false;
+		return null;
 	}
 
 
 	/**
 	 * Extracts the messages and translations from the MO file
 	 *
-	 * @throws \Aimeos\MW\Translation\Exception If file content is invalid
 	 * @return array Associative list of original singular as keys and one or more translations as values
+	 * @throws \Aimeos\MW\Translation\Exception If file content is invalid
 	 */
-	protected function extract()
+	protected function extract() : array
 	{
 		$magic = $this->readInt( 'V' );
 
@@ -114,10 +112,10 @@ class Mo
 	 *
 	 * @param array $originalTable MO table for original strings
 	 * @param array $translationTable MO table for translated strings
-	 * @param integer $total Total number of translations
+	 * @param int $total Total number of translations
 	 * @return array Associative list of original singular as keys and one or more translations as values
 	 */
-	protected function extractTable( $originalTable, $translationTable, $total )
+	protected function extractTable( array $originalTable, array $translationTable, int $total ) : array
 	{
 		$messages = [];
 
@@ -166,10 +164,10 @@ class Mo
 	 * @param string $byteOrder Format code for unpack()
 	 * @return integer Read integer
 	 */
-	protected function readInt( $byteOrder )
+	protected function readInt( string $byteOrder ) : ?int
 	{
-		if( ( $content = $this->read( 4 )) === false ) {
-			return false;
+		if( ( $content = $this->read( 4 )) === null ) {
+			return null;
 		}
 
 		$content = unpack( $byteOrder, $content );
@@ -181,10 +179,10 @@ class Mo
 	 * Returns the list of integers starting from the current position
 	 *
 	 * @param string $byteOrder Format code for unpack()
-	 * @param integer $count Number of four byte integers to read
+	 * @param int $count Number of four byte integers to read
 	 * @return array List of integers
 	 */
-	protected function readIntArray( $byteOrder, $count )
+	protected function readIntArray( string $byteOrder, int $count ) : array
 	{
 		return unpack( $byteOrder . $count, $this->read( 4 * $count ) );
 	}
@@ -193,13 +191,14 @@ class Mo
 	/**
 	 * Returns a part of the file
 	 *
-	 * @param integer $bytes Number of bytes to read
-	 * @return string|boolean Read bytes or false on failure
+	 * @param int $bytes Number of bytes to read
+	 * @return string|null Read bytes or null on failure
 	 */
-	protected function read( $bytes )
+	protected function read( int $bytes ) : ?string
 	{
-		$data = substr( $this->str, $this->pos, $bytes );
-		$this->seekto( $this->pos + $bytes );
+		if( ( $data = substr( $this->str, $this->pos, $bytes ) ) !== null ) {
+			$this->seekto( $this->pos + $bytes );
+		}
 
 		return $data;
 	}
@@ -208,10 +207,10 @@ class Mo
 	/**
 	 * Move the cursor to the position in the file
 	 *
-	 * @param integer $pos Number of bytes to move
-	 * @return integer New file position in bytes
+	 * @param int $pos Number of bytes to move
+	 * @return int New file position in bytes
 	 */
-	protected function seekto( $pos )
+	protected function seekto( int $pos ) : int
 	{
 		$this->pos = ( $this->strlen < $pos ? $this->strlen : $pos );
 		return $this->pos;

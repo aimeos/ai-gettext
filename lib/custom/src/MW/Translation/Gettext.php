@@ -33,7 +33,7 @@ class Gettext
 	 * @param array $sources Associative list of translation domains and lists of translation directories.
 	 * @param string $locale ISO language name, like "en" or "en_US"
 	 */
-	public function __construct( array $sources, $locale )
+	public function __construct( array $sources, string $locale )
 	{
 		parent::__construct( $locale );
 
@@ -49,11 +49,11 @@ class Gettext
 	 * @return string The translated string
 	 * @throws \Aimeos\MW\Translation\Exception Throws exception on initialization of the translation
 	 */
-	public function dt( $domain, $singular )
+	public function dt( string $domain, string $singular ) : string
 	{
 		foreach( $this->getTranslations( $domain ) as $object )
 		{
-			if( ( $result = $object->get( $singular ) ) !== false )
+			if( ( $result = $object->get( $singular ) ) !== null )
 			{
 				if( is_array( $result ) && isset( $result[0] ) ) {
 					return (string) $result[0];
@@ -73,17 +73,17 @@ class Gettext
 	 * @param string $domain Translation domain
 	 * @param string $singular String in singular form
 	 * @param string $plural String in plural form
-	 * @param integer $number Quantity to choose the correct plural form for languages with plural forms
+	 * @param int $number Quantity to choose the correct plural form for languages with plural forms
 	 * @return string Returns the translated singular or plural form of the string depending on the given number
 	 * @throws \Aimeos\MW\Translation\Exception Throws exception on initialization of the translation
 	 */
-	public function dn( $domain, $singular, $plural, $number )
+	public function dn( string $domain, string $singular, string $plural, int $number ) : string
 	{
 		$idx = $this->getPluralIndex( (int) $number, $this->getLocale() );
 
 		foreach( $this->getTranslations( $domain ) as $object )
 		{
-			if( ( $list = $object->get( $singular ) ) !== false && isset( $list[$idx] ) ) {
+			if( ( $list = $object->get( $singular ) ) !== null && isset( $list[$idx] ) ) {
 				return (string) $list[$idx];
 			}
 		}
@@ -98,7 +98,7 @@ class Gettext
 	 * @param string $domain Translation domain
 	 * @return array Associative list with original string as key and associative list with index => translation as value
 	 */
-	public function getAll( $domain )
+	public function getAll( string $domain ) : array
 	{
 		$messages = [];
 
@@ -117,7 +117,7 @@ class Gettext
 	 * @return array List of translation objects implementing \Aimeos\MW\Translation\File\Mo
 	 * @throws \Aimeos\MW\Translation\Exception If initialization fails
 	 */
-	protected function getTranslations( $domain )
+	protected function getTranslations( string $domain ) : array
 	{
 		if( !isset( $this->files[$domain] ) )
 		{

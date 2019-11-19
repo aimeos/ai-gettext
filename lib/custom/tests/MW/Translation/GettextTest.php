@@ -38,15 +38,6 @@ class GettextTest extends \PHPUnit\Framework\TestCase
 	}
 
 
-	public function testDtInvalid()
-	{
-		$this->assertEquals( '', $this->object->dt( 'testDomain', null ) );
-
-		$this->setExpectedException( \Aimeos\MW\Translation\Exception::class );
-		$this->object->dt( 'invalidTestDomain', 'test' );
-	}
-
-
 	public function testDn()
 	{
 		/*
@@ -66,16 +57,6 @@ class GettextTest extends \PHPUnit\Framework\TestCase
 		$this->assertEquals( 'plural 1', $object->dn( 'testDomain', 'File', 'Files', 22 ) );
 		$this->assertEquals( 'plural 2', $object->dn( 'testDomain', 'File', 'Files', 25 ) );
 		$this->assertEquals( 'singular', $object->dn( 'testDomain', 'File', 'Files', 31 ) );
-	}
-
-
-	public function testDnInvalid()
-	{
-		$this->assertEquals( '', $this->object->dn( 'testDomain', '', null, 1 ) );
-		$this->assertEquals( '', $this->object->dn( 'testDomain', '', '', null ) );
-
-		$this->setExpectedException( \Aimeos\MW\Translation\Exception::class );
-		$this->object->dn( 'invalidTestDomain', 'test', 'tests', 2 );
 	}
 
 
