@@ -14,7 +14,7 @@ class GettextTest extends \PHPUnit\Framework\TestCase
 	private $object;
 
 
-	protected function setUp()
+	protected function setUp() : void
 	{
 		$ds = DIRECTORY_SEPARATOR;
 
@@ -26,7 +26,7 @@ class GettextTest extends \PHPUnit\Framework\TestCase
 	}
 
 
-	protected function tearDown()
+	protected function tearDown() : void
 	{
 		$this->object = null;
 	}
