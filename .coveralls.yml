@@ -1,3 +1,0 @@
-src_dir: ext/ai-gettext
-json_path: ext/ai-gettext/coveralls.json
-coverage_clover: ext/ai-gettext/lib/custom/tests/coverage.xml
