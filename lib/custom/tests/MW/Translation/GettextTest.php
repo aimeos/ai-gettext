@@ -104,7 +104,7 @@ class GettextTest extends \PHPUnit\Framework\TestCase
 		);
 
 		$object = new \Aimeos\MW\Translation\Gettext( $translationSources, 'de_DE' );
-		$result = $object->getAll( 'testDomain' );
+		$result = $object->all( 'testDomain' );
 
 		$this->assertArrayHasKey( 'Car', $result );
 		$this->assertEquals( 'KFZ', $result['Car'][0] );

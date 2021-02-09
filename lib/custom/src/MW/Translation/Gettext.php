@@ -98,7 +98,7 @@ class Gettext
 	 * @param string $domain Translation domain
 	 * @return array Associative list with original string as key and associative list with index => translation as value
 	 */
-	public function getAll( string $domain ) : array
+	public function all( string $domain ) : array
 	{
 		$messages = [];
 
