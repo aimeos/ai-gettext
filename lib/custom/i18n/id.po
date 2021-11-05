@@ -1,0 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Kevin Purwito, 2021
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: ai-gettext\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-04 18:31+0200\n"
+"PO-Revision-Date: 2017-10-02 17:14+0000\n"
+"Last-Translator: Kevin Purwito, 2021\n"
+"Language-Team: Indonesian (https://www.transifex.com/aimeos/teams/39015/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/MW/Translation/Gettext.php:126
+#, php-format
+msgid "No translation directory for domain \"%1$s\" available"
+msgstr "Tidak ada direktori terjemahan untuk domain \"%1$s\" tersedia"
+
+#: src/MW/Translation/File/Mo.php:42
+#, php-format
+msgid "Unable to read from file \"%1$s\""
+msgstr "Tidak bisa membaca file \"%1$s\""
