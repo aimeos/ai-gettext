@@ -10,7 +10,7 @@ jobs:
       - image: aimeos/ci-php:7.1
     steps:
       - checkout
-      - run: git clone --depth=50 --branch=2021.10 git://github.com/aimeos/aimeos-core.git ../aimeos-core
+      - run: git clone --depth=50 --branch=2021.10 https://github.com/aimeos/aimeos-core ../aimeos-core
       - run: cd .. && mv project aimeos-core/ext/ai-gettext && mv aimeos-core project && cd project
       - restore_cache:
           keys:
@@ -26,7 +26,7 @@ jobs:
       - image: aimeos/ci-php:7.2
     steps:
       - checkout
-      - run: git clone --depth=50 --branch=2021.10 git://github.com/aimeos/aimeos-core.git ../aimeos-core
+      - run: git clone --depth=50 --branch=2021.10 https://github.com/aimeos/aimeos-core ../aimeos-core
       - run: cd .. && mv project aimeos-core/ext/ai-gettext && mv aimeos-core project && cd project
       - restore_cache:
           keys:
@@ -42,7 +42,7 @@ jobs:
       - image: aimeos/ci-php:7.3
     steps:
       - checkout
-      - run: git clone --depth=50 --branch=2021.10 git://github.com/aimeos/aimeos-core.git ../aimeos-core
+      - run: git clone --depth=50 --branch=2021.10 https://github.com/aimeos/aimeos-core ../aimeos-core
       - run: cd .. && mv project aimeos-core/ext/ai-gettext && mv aimeos-core project && cd project
       - restore_cache:
           keys:
@@ -58,7 +58,7 @@ jobs:
       - image: aimeos/ci-php:7.4
     steps:
       - checkout
-      - run: git clone --depth=50 --branch=2021.10 git://github.com/aimeos/aimeos-core.git ../aimeos-core
+      - run: git clone --depth=50 --branch=2021.10 https://github.com/aimeos/aimeos-core ../aimeos-core
       - run: cd .. && mv project aimeos-core/ext/ai-gettext && mv aimeos-core project && cd project
       - restore_cache:
           keys:
@@ -74,7 +74,7 @@ jobs:
       - image: aimeos/ci-php:8.0
     steps:
       - checkout
-      - run: git clone --depth=50 --branch=master git://github.com/aimeos/aimeos-core.git ../aimeos-core
+      - run: git clone --depth=50 --branch=master https://github.com/aimeos/aimeos-core ../aimeos-core
       - run: cd .. && mv project aimeos-core/ext/ai-gettext && mv aimeos-core project && cd project
       - restore_cache:
           keys:
@@ -90,7 +90,7 @@ jobs:
       - image: aimeos/ci-php:8.1
     steps:
       - checkout
-      - run: git clone --depth=50 --branch=master git://github.com/aimeos/aimeos-core.git ../aimeos-core
+      - run: git clone --depth=50 --branch=master https://github.com/aimeos/aimeos-core ../aimeos-core
       - run: cd .. && mv project aimeos-core/ext/ai-gettext && mv aimeos-core project && cd project
       - restore_cache:
           keys:
