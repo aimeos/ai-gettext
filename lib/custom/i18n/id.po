@@ -6,11 +6,12 @@
 # Translators:
 # Kevin Purwito, 2021
 # 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ai-gettext\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 18:31+0200\n"
+"POT-Creation-Date: 2021-12-30 16:30+0100\n"
 "PO-Revision-Date: 2017-10-02 17:14+0000\n"
 "Last-Translator: Kevin Purwito, 2021\n"
 "Language-Team: Indonesian (https://www.transifex.com/aimeos/teams/39015/id/)\n"
